@@ -113,4 +113,15 @@ public class Main {
         }
         System.out.println("Trip end at " + list.getLast());
     }
+
+    private static void testIterator(LinkedList<String> list) {
+        var iterator = list.iterator();
+        while (iterator.hasNext()) {
+            // System.out.println(iterator);
+            if(iterator.next().equals("Brisbane")) {
+                iterator.remove();
+            }
+        }
+        System.out.println(list);
+    }
 }
